@@ -11,7 +11,6 @@ setup(
         'torchmetrics',
         'fvcore',
         'iopath',
-        'xformers',
         'opencv-python',
         'pycocotools',
         'matplotlib',
