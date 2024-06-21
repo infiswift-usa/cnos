@@ -26,7 +26,9 @@ setup(
         'ruamel.yaml',
         'pyrender',
         'wandb',
-        'distinctipy'
+        'distinctipy',
+        'scikit-image',
+        'git+https://github.com/facebookresearch/segment-anything.git'
     ],
     dependency_links=[
     ],
@@ -41,7 +43,7 @@ setup(
             # 'script_name=module:function'
         ],
     },
-    package_data={'cnos':['configs/**/*'], 'cnos.poses':['src/poses/predefined_poses/*']},
+    package_data={'cnos':['configs/**/*'], 'cnos.poses':['predefined_poses/*']},
     zip_safe=False,
     include_package_data=True
 )
