@@ -43,7 +43,7 @@ setup(
             # 'script_name=module:function'
         ],
     },
-    package_data={'cnos':['configs/**/*'], 'cnos.poses':['predefined_poses/*']},
+    package_data={'cnos':['configs/**/*', 'src/poses/predefined_poses/*']},
     zip_safe=False,
     include_package_data=True
 )
