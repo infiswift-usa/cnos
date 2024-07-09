@@ -39,8 +39,8 @@ import importlib.resources as resources
 from cnos import __name__ as pkg_name
 
 class Segmenter:
-    def __init__(self):
-        self.load_model()
+    def __init__(self, model = 'cnos'):
+        self.load_model(model = model)
 
     def to_grayscale(self):
         # Convert the image to grayscale
@@ -51,9 +51,9 @@ class Segmenter:
         _, self.binary_image = cv2.threshold(self.gray_image, 128, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
     
-    def load_model(self, stability_score_thresh=0.97):
+    def load_model(self, model, stability_score_thresh=0.97):
         with initialize(version_base=None, config_path="./configs"):
-            cfg = compose(config_name='run_inference.yaml')
+            cfg = compose(config_name='run_inference.yaml', overrides=[f"model={model}"])
         cfg_segmentor = cfg.model.segmentor_model
 
         print (cfg.model)

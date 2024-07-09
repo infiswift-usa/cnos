@@ -28,7 +28,9 @@ setup(
         'wandb',
         'distinctipy',
         'scikit-image',
-        'segment-anything @ git+https://github.com/facebookresearch/segment-anything.git@main'
+        'segment-anything @ git+https://github.com/facebookresearch/segment-anything.git@main',
+        'chardet',
+        'ultralytics==8.0.135'
     ],
     dependency_links=[
     ],
