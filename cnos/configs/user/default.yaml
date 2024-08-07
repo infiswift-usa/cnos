@@ -1,2 +1,2 @@
-local_root_dir: ./data/vision
+local_root_dir: ${oc.env:MODELS_HOME}/vision
 slurm_root_dir: ./data/vision
